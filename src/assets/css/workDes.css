@@ -1,0 +1,184 @@
+.workDes {
+    background-color: #f8f9fa;
+}
+
+.workDes .order-single {
+    width: 100%;
+    background: #fff;
+    font-size: .597333rem;
+    padding-bottom: .426667rem;
+}
+
+.workDes .cicle {
+    width: 0.341333rem;
+    height: 0.341333rem;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: -14px;
+    background: #000;
+    transform: translateY(-50%);
+}
+
+.workDes .urgent {
+    color: #fa5252;
+    position: relative;
+}
+
+.workDes .urgent .cicle {
+    background: #fa5252;
+}
+
+.workDes .orange {
+    color: #ff922b;
+    position: relative;
+}
+
+.workDes .orange .cicle {
+    background: #ff922b;
+}
+
+.workDes .blue {
+    color: #329af0;
+    position: relative;
+}
+
+.workDes .blue .cicle {
+    background: #329af0;
+}
+
+.workDes .order-list {
+    padding: 0 0.5rem;
+    height: 1.706667rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.workDes .order-list .namber {
+    font-size: 0.597333rem;
+    font-weight: 600;
+}
+
+.workDes .order-list .send {
+    margin-left: -2.218667rem;
+    color: #212529;
+    font-weight: 600;
+}
+
+.workDes .list-time {
+    margin: 0 auto;
+    padding: 0 0.5rem;
+}
+
+.workDes .list-time>div {
+    padding: .426667rem 0;
+}
+
+.workDes .list-time .right {}
+
+.workDes .list-people {
+    color: #868e96;
+    width: 3.754667rem;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 350px) {
+    .workDes .order-single .list-people {
+        display: block;
+        margin: .426667rem 0;
+    }
+    .workDes .order-single .list-time {
+        padding: 0 0.5rem;
+    }
+}
+
+.workDes .program {
+    width: 100%;
+    background: #fff;
+    margin-top: 0.512rem;
+    font-size: .597333rem;
+}
+
+.workDes .program-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.workDes .list-problem {
+    padding: .426667rem 0.5rem;
+    margin: 0 auto;
+    display: flex;
+}
+
+.workDes .more_text {
+    flex: 1;
+    word-break: break-word;
+}
+
+.workDes .list-problem .service {
+    margin-left: 0.853333rem;
+}
+
+.workDes .list-description,
+.workDes .list-image {
+    padding: 0.426667rem 0.5rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.workDes .text {
+    flex: 1;
+}
+
+.workDes .pic {
+    width: 2.048rem;
+    height: 2.048rem;
+    background: #e9ecef;
+    margin-right: 0.213333rem;
+}
+
+.workDes .pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.workDes .program-right {
+    max-width: 2.56rem;
+    height: .768rem;
+    background-color: #e8f7ff;
+    text-align: center;
+    color: #329af0;
+    padding: 0 .213333rem;
+    font-size: .512rem;
+}
+
+.workDes .footers {
+    width: 100%;
+    background: #fff;
+    margin-top: 0.512rem;
+}
+
+.workDes .footers .reason {
+    width: 88%;
+    display: flex;
+    align-items: center;
+}
+
+.footers-lest,
+.footers-item {
+    /* padding: 1.024rem 0.5rem 0;    */
+    padding: .426667rem .5rem;
+}
+
+.workDes .sent,
+say {
+    flex: 1;
+    word-break: break-all;
+}

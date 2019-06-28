@@ -1,0 +1,46 @@
+//  公共变量、函数
+$gray = #868E96
+$blue = #329AF0
+
+my-border($color=#e9ecef)
+    1px solid $color
+
+my-width(an mn)
+    width: "calc(%s - %s)" % (an mn)
+    margin-left: auto
+    margin-right: auto
+
+table-center()
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+poa-center(w,h)
+    position: absolute;
+    width: w;
+    height: h;
+    left: 50%;
+    top: 50%;
+    // margin-left:-($w/2);
+    // margin-top:-($h/2);
+    transform: translate(-50%, -50%)
+
+flex-center()
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+t-overflow(line=1)
+    if line == 1
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    else
+        display: -webkit-box;
+        -webkit-line-clamp: line;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+
+
