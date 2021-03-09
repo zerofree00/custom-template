@@ -1,18 +1,20 @@
-/* eslint-disable */
+/*
+ * 功能： 表单验证
+ */
+
 // validate phone number
 export const validatePhoneNum = (rule, value, callback) => {
     const patt = /^1[3456789]\d{9}$/;
     if (!value) {
         if (rule.required) {
-            callback(new Error("手机号码不能为空"));
+            callback(new Error('手机号码不能为空'));
         } else {
             callback();
         }
-
     } else if (patt.test(value)) {
         callback();
     } else {
-        callback(new Error("请填写正确格式的手机号码"));
+        callback(new Error('请填写正确格式的手机号码'));
     }
 };
 
@@ -22,16 +24,15 @@ export const validateEmail = (rule, value, callback) => {
     // const patt = /^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$/;
     if (!value) {
         if (rule.required) {
-            callback(new Error("请输入正确的邮箱地址"));
+            callback(new Error('请输入正确的邮箱地址'));
         } else {
             callback();
         }
-
     }
     if (patt.test(value)) {
         callback();
     } else {
-        callback(new Error("请输入正确的邮箱地址"));
+        callback(new Error('请输入正确的邮箱地址'));
     }
 };
 
@@ -41,15 +42,14 @@ export const validateEmailAddress = (rule, value, callback) => {
 
     if (!value) {
         if (rule.required) {
-            callback(new Error("请输入正确的邮箱地址"));
+            callback(new Error('请输入正确的邮箱地址'));
         } else {
             callback();
         }
-
     } else if (patt.test(value)) {
         callback();
     } else {
-        callback(new Error("请输入正确的邮箱地址"));
+        callback(new Error('请输入正确的邮箱地址'));
     }
 };
 
@@ -57,15 +57,14 @@ export const validateEmailAddress = (rule, value, callback) => {
 export const validateVerificationCode = (rule, value, callback) => {
     if (!value) {
         if (rule.required) {
-            callback(new Error("验证码不能为空"));
+            callback(new Error('验证码不能为空'));
         } else {
             callback();
         }
-
     } else if (value.toString().length === 6) {
         callback();
     } else {
-        callback(new Error("请填写正确的验证码信息"));
+        callback(new Error('请填写正确的验证码信息'));
     }
 };
 
@@ -75,15 +74,14 @@ export const validateRealName = (rule, value, callback) => {
     // const patt = /[^\u4e00-\u9fa5]/; // 只能输入中文
     if (!value) {
         if (rule.required) {
-            callback(new Error("请输入"));
+            callback(new Error('请输入'));
         } else {
             callback();
         }
-
     } else if (patt.test(value)) {
         callback();
     } else {
-        callback(new Error(""));
+        callback(new Error(''));
     }
 };
 
@@ -92,31 +90,30 @@ export const validateChainName = (rule, value, callback) => {
     const patt = /^[\u4e00-\u9fa5]{1,50}$/;
     if (!value) {
         if (rule.required) {
-            callback(new Error("请输入"));
+            callback(new Error('请输入'));
         } else {
             callback();
         }
-
     } else if (patt.test(value)) {
         callback();
     } else {
-        callback(new Error("请填写正确的中文信息"));
+        callback(new Error('请填写正确的中文信息'));
     }
 };
 
-// validate 
+// validate
 export const validateMoney = (rule, value, callback) => {
     const patt = /^(([1-9]\d*)|\d)(\.\d{1,2})?$/;
     if (!value) {
         if (rule.required) {
-            callback(new Error("请输入"));
+            callback(new Error('请输入'));
         } else {
             callback();
         }
     } else if (patt.test(value)) {
         callback();
     } else {
-        callback(new Error("请填写正确金额"));
+        callback(new Error('请填写正确金额'));
     }
 };
 
@@ -126,7 +123,11 @@ export const validatePhoneOrMobile = (rule, value, callback) => {
 
     if (!value) {
         if (rule.required) {
-            callback(new Error("请填写正确手机号或固定电话,例如13000000000/0551-65654455"));
+            callback(
+                new Error(
+                    '请填写正确手机号或固定电话,例如13000000000/0551-65654455'
+                )
+            );
         } else {
             callback();
         }
@@ -135,7 +136,7 @@ export const validatePhoneOrMobile = (rule, value, callback) => {
     } else {
         callback(
             new Error(
-                "请填写正确手机号或固定电话,例如13000000000/0551-65654455"
+                '请填写正确手机号或固定电话,例如13000000000/0551-65654455'
             )
         );
     }
@@ -147,7 +148,7 @@ export const validatePhoneOrMobileNorequire = (rule, value, callback) => {
 
     if (!value) {
         if (rule.required) {
-            callback(new Error("请输入"));
+            callback(new Error('请输入'));
         } else {
             callback();
         }
@@ -156,7 +157,7 @@ export const validatePhoneOrMobileNorequire = (rule, value, callback) => {
     } else {
         callback(
             new Error(
-                "请填写正确手机号或固定电话,例如13000000000/0551-65654455"
+                '请填写正确手机号或固定电话,例如13000000000/0551-65654455'
             )
         );
     }
@@ -168,14 +169,14 @@ export const validateBankcardNum = (rule, value, callback) => {
 
     if (!value) {
         if (rule.required) {
-            callback(new Error("请输入"));
+            callback(new Error('请输入'));
         } else {
             callback();
         }
     } else if (patt.test(value)) {
         callback();
     } else {
-        callback(new Error("请填写正确银行卡号"));
+        callback(new Error('请填写正确银行卡号'));
     }
 };
 
@@ -185,14 +186,14 @@ export const validateIdcardNum = (rule, value, callback) => {
 
     if (!value) {
         if (rule.required) {
-            callback(new Error("请输入"));
+            callback(new Error('请输入'));
         } else {
             callback();
         }
     } else if (patt.test(value)) {
         callback();
     } else {
-        callback(new Error("请填写正确身份证号"));
+        callback(new Error('请填写正确身份证号'));
     }
 };
 
@@ -207,13 +208,13 @@ export const validateVersion = (rule, value, callback) => {
     const patt = /^([1-9]\d|[1-9])(\.([1-9]\d|\d)){2}$/;
     if (!value) {
         if (rule.required) {
-            callback(new Error("请输入"));
+            callback(new Error('请输入'));
         } else {
             callback();
         }
     } else if (patt.test(value)) {
         callback();
     } else {
-        callback(new Error("请填写正确版本号"));
+        callback(new Error('请填写正确版本号'));
     }
 };
