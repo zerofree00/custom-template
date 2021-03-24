@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 10:37:24
- * @LastEditTime: 2021-03-24 11:37:56
+ * @LastEditTime: 2021-03-24 12:01:15
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \project\VUE3\temp\h5-less\README.md
 -->
-# h5-less - vant
-([Vue 3] less, babel, pwa, router, axios , vant , vuex, eslint ,  amfe-flexible , postcss-pxtorem)
+# h5 - less - vant
+([Vue 3] less, babel, pwa, router, axios , vant , vuex , eslint ,  amfe-flexible , postcss-pxtorem)
 -  terser-webpack-plugin (移除 console )
 -  filemanager-webpack-plugin (打包压缩)
 -  vconsole-webpack-plugin (适配移动端的，查看打印的)
