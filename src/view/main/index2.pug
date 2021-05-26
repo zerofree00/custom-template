@@ -1,0 +1,11 @@
+extends ./../layout2
+//- include
+//- 网站的头部信息这边拆分出来，便于每个页面的SEO配置和配置页面独有的css，js
+block title
+    link(rel="stylesheet", href="./css/public/mixin.css") 
+    title 列表页
+
+block content
+    include ../public/header 
+    | 中间部分
+    include ../public/footer
