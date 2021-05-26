@@ -1,11 +1,13 @@
  
 # gulp pug stylus
+
 glup 3.0
 
 #### 安装
 
 ```
 npm i
+
 ```
 
 #### 启动
@@ -37,14 +39,13 @@ npm run all
   1. 在package.json同级目录下新建文件npm-shrinkwrap.json，输入以下内容：
 
     ```
-      {
-          "dependencies": {
-              "graceful-fs": {
-                  "version": "4.2.2"
-              }
-          }
-      }
-
+    {
+    "dependencies": {
+    "graceful-fs": {
+    "version": "4.2.2"
+    }
+    }
+    }
     ```
 
   2. npm install
