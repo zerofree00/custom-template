@@ -1,0 +1,112 @@
+extends ./../layout
+//- include
+//- 网站的头部信息这边拆分出来，便于每个页面的SEO配置和配置页面独有的css，js
+block title
+
+    title 广西
+
+block content 
+    .layOutPage-main.clearfix 
+        .list-content
+            table(width='100%' cellspacing='0' cellpadding='0' border='0')
+                tbody
+                    tr
+                        td(width='276')
+                            .sidebar
+                                h2
+                                    span 留言中心
+                                    i
+                                ul.sidebar-list
+                                    li
+                                        a(href='javascript:void(0);')
+                                            i
+                                            | 工作成果
+                                    li.on
+                                        a(href='javascript:void(0);')
+                                            i
+                                            | 工作计划
+                                    li
+                                        a(href='javascript:void(0);')
+                                            i
+                                            | 经验交流
+                                    li
+                                        a(href='javascript:void(0);')
+                                            i
+                                            | 意见建议 
+                        td
+                            .list-right
+                                h2.list-right-title
+                                    span 工作计划
+                                ul.list-right-ul
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 中共中央办公厅印发《干部选拔任用工作监督检查和责任追究办法》
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 通达高速路山村焕生机 ——省交控集团助力全省脱贫攻坚纪实
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 1-4月份省属企业经济运行情况
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 中共中央办公厅印发《干部选拔任用工作监督检查和责任追究办法》
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 中共中央办公厅印发《干部选拔任用工作监督检查和责任追究办法》
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 中共中央办公厅印发《干部选拔任用工作监督检查和责任追究办法》
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 中共中央办公厅印发《干部选拔任用工作监督检查和责任追究办法》
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 中共中央办公厅印发《干部选拔任用工作监督检查和责任追究办法》
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 中共中央办公厅印发《干部选拔任用工作监督检查和责任追究办法》
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 中共中央办公厅印发《干部选拔任用工作监督检查和责任追究办法》
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 中共中央办公厅印发《干部选拔任用工作监督检查和责任追究办法》
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 中共中央办公厅印发《干部选拔任用工作监督检查和责任追究办法》
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 中共中央办公厅印发《干部选拔任用工作监督检查和责任追究办法》
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 中共中央办公厅印发《干部选拔任用工作监督检查和责任追究办法》
+                                    li
+                                        i 2019-05-14
+                                        a(href='#') 中共中央办公厅印发《干部选拔任用工作监督检查和责任追究办法》
+                                .page
+                                    span
+                                        | 共
+                                        i 102
+                                        | 条
+                                    span
+                                        | 页次
+                                        i 1
+                                        | /15
+                                    a.home(href='#') 首页
+                                    a(href='#') 上一页
+                                    a.on(href='#') 1
+                                    a(href='#') 2
+                                    a(href='#') 3
+                                    a(href='#') 4
+                                    a(href='#') 5
+                                    a(href='#') 下一页
+                                    a(href='#') 尾页
+                                    span 转到
+                                    select
+                                        option 1
+
+block footerEnd  
+    script.
+        $("ul.sidebar-list li ").click(function(){    
+               $(this).addClass("on").siblings().removeAttr("class"); 
+        });

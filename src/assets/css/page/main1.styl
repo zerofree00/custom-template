@@ -1,0 +1,154 @@
+ html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,a,address,em,img,ol,ul,li,fieldset,form,label,legend,table,tbody,tfoot,thead,tr,th,td,i,b,s 
+    margin 0
+    padding 0
+    border 0
+    font-weight inherit
+    font-style inherit
+    font-family Helvetica,Arial
+    word-break break-all
+
+.font-yahei 
+    font-family "微软雅黑"
+
+body 
+    word-wrap break-word
+    font-size 14px
+    color #000
+    line-height 1.5
+    font-family Helvetica
+    font-family: Microsoft YaHei;
+ 
+select 
+    appearance none
+    -webkit-appearance none
+    -ms-appearance none
+    -moz-appearance none
+    background-color transparent
+
+ul,ol 
+    list-style none 
+:focus 
+    outline none
+.clearfix 
+    clear both
+    content ""
+    display block
+    overflow hidden
+    
+.clear 
+    clear both
+.fl 
+    float left
+.fr 
+    float right
+img
+    width: 100%
+
+a 
+    img 
+        border none
+a,a:link 
+    text-decoration none
+    color #333
+button 
+    overflow visible
+    padding 0
+    margin 0
+    border 0 none
+    background-color transparent
+    appearance none
+    -webkit-appearance none
+    &::-moz-focus-inner 
+        padding 0
+textarea,input 
+    background none
+    padding 0
+    -webkit-border-radius 0
+    -moz-border-radius 0
+    border-radius 0 
+textarea:focus,input:focus,button:focus 
+    outline none
+* 
+    -webkit-tap-highlight-color rgba(0,0,0,0)
+    overflow-scrolling touch
+    -webkit-overflow-scrolling touch
+    backface-visibility hidden
+    -webkit-backface-visibility hidden
+    box-sizing border-box
+[v-cloak] 
+    opacity 0!important
+.w-1200 
+    width 1200px
+    margin 0 auto
+.inline_div 
+    display inline-block
+.block 
+    display block!important
+
+
+//  公共变量、函数
+$gray = #868E96
+$blue = #329AF0
+
+my-border($color=#e9ecef)
+    1px solid $color
+
+my-width(an mn)
+    width: "calc(%s - %s)" % (an mn)
+    margin-left: auto
+    margin-right: auto
+
+table-center()
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+poa-center(w,h)
+    position: absolute;
+    width: w;
+    height: h;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%)
+    left: 50%;
+    top: 50%;
+    margin-left:- (w / 2);
+    margin-top:- (h / 2);
+
+poa-center-left(h)
+    if h != 0
+        position: absolute;  
+        left: 0;
+        top: 50%; 
+        margin-top:- h ;
+    else
+        position: absolute;  
+        left: 0;
+        top: 0; 
+        margin-top:0 ;
+
+
+flex-center()
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+t-overflow(line=1)
+    if line == 1
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    else
+        -webkit-line-clamp: line; 
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal !important; 
+        -webkit-box-orient: vertical;
+        // word-break: break-all;
+        word-break: break-word;
+
+.ellipsis_1
+    t-overflow(1)
+.ellipsis_2
+    t-overflow(2)
