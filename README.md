@@ -14,6 +14,10 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
  `npm init vite@latest`
 
+ `npm install`
+ 
+ `npm run dev`
+
 ## Eslint 配置
 
 1. `npm  i eslint --save-dev` 安装eslint
