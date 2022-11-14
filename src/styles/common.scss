@@ -1,0 +1,999 @@
+html {
+  font-size: 26.66667vw;
+  // background: $background-blue
+}
+
+body {
+  font-size: $font-size-16px;
+}
+
+#app,
+html,
+body {
+  height: 100%;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// 处理ios小黑条
+@supports (bottom: env(safe-area-inset-bottom)) {
+  html {
+    padding-bottom: env(safe-area-inset-bottom, 30px);
+    padding-bottom: constant(safe-area-inset-bottom, 30px);
+    padding-top: env(safe-area-inset-top, 30px);
+    padding-top: constant(safe-area-inset-top, 30px);
+  }
+}
+
+#app {
+  // display: flex;
+  // flex-direction: column;
+
+  // .tailor {
+  //   flex-shrink: 1;
+  // }
+}
+
+.homeContent {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+//设置文字超出隐藏
+.overflowText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+//页面底部提交按钮
+.footer-button {
+  padding: 12px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .van-button {
+    width: 100%;
+    margin-right: 19px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: $border-radius;
+    font-size: $font-size-16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+}
+
+button.gary {
+  background: #EEEEEE;
+  color: $main-color;
+  border-color: #EEEEEE;
+}
+
+button.white {
+  background: #fff;
+  color: $text-color;
+  border-color: #eee;
+}
+
+
+//flex 上下布局
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .flex-content {
+    // flex
+    flex-grow: 1;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .flex-footer {
+    flex-shrink: 0;
+  }
+}
+
+// 书籍样式
+.cell-title {
+  display: flex;
+  align-items: center;
+  // margin-bottom: 14px;
+
+  span {
+    font-size: 18px;
+    color: $text-color;
+  }
+
+  i {
+    width: 5px;
+    height: 21px;
+    background: rgba(35, 99, 225, 1);
+    border-radius: 0px 4px 0px 4px;
+    display: inline-block;
+    margin-right: 12px;
+  }
+}
+
+// 列表页面菜单样式
+.dropdown-box {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  border-radius: $border-radius;
+  height: 44px;
+
+  >div {
+    width: 50%;
+  }
+
+  .van-dropdown-menu__bar {
+    box-shadow: none;
+  }
+
+  overflow: hidden;
+  margin-bottom: 8px;
+
+  .van-dropdown-menu__title {
+    font-size: $font-size-14px;
+    color: $text-color-gary1;
+  }
+
+  .screening {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: $font-size-14px;
+    color: $text-color-gary1;
+
+    i {
+      margin-left: 5px;
+    }
+  }
+
+  .show {
+    color: $main-color;
+  }
+
+  .van-dropdown-item {
+    margin-top: -6px;
+  }
+
+  .van-dropdown-item__content {
+    left: $padding-md;
+    right: $padding-md;
+    width: calc(100% - $padding-md*2);
+    top: -10px;
+    border-radius: $border-radius;
+  }
+}
+
+// popup 样式修改
+.van-popup {
+  padding: $padding-md;
+  // overflow: hidden;
+
+  .popup-title {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    line-height: 1;
+    font-weight: bold;
+  }
+
+  .van-icon-cross {
+    color: #666;
+    font-size: 18px;
+  }
+}
+
+.van-field__clear {
+  padding-left: 20px;
+}
+
+.van-list__finished-text {
+  .empty {
+    padding-top: 20px;
+  }
+}
+
+.ck-content {
+  overflow: auto;
+
+  table {
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    -webkit-border-horizontal-spacing: 1px;
+    -webkit-border-vertical-spacing: 1px;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+  }
+
+  caption {
+    display: table-caption;
+    text-align: -webkit-center;
+    display: table-caption;
+    text-align: -webkit-center;
+    caption-side: inherit;
+    font-size: 13px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    color: #333;
+  }
+
+  td,
+  th,
+  table {
+    border: 1px solid grey;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  p {
+    display: block;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1__qem;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  address,
+  article,
+  aside,
+  div,
+  footer,
+  header,
+  hgroup,
+  layer,
+  main,
+  nav,
+  section {
+    display: block;
+  }
+
+  marquee {
+    display: inline-block;
+  }
+
+  blockquote {
+    display: block;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
+  }
+
+  figcaption {
+    display: block;
+  }
+
+  figure {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
+  }
+
+  q {
+    display: inline;
+  }
+
+  q::before {
+    content: open-quote;
+  }
+
+  q::after {
+    content: close-quote;
+  }
+
+  center {
+    display: block;
+    /* special centering to be able to emulate the html4/netscape behaviour */
+    text-align: -webkit-center;
+  }
+
+  hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: inset;
+    border-width: 1px;
+  }
+
+  /* media elements */
+
+  body:-webkit-full-page-media {
+    background-color: rgb(38, 38, 38);
+  }
+
+  audio {
+    width: 200px;
+    height: 25px;
+  }
+
+  /* heading elements */
+
+  h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67__qem;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+  }
+
+  :is(article, aside, nav, section) h1 {
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83__qem;
+    -webkit-margin-after: 0.83em;
+  }
+
+  :is(article, aside, nav, section) :is(article, aside, nav, section) h1 {
+    font-size: 1.17em;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+  }
+
+  :is(article, aside, nav, section) :is(article, aside, nav, section) :is(article, aside, nav, section) h1 {
+    font-size: 1em;
+    -webkit-margin-before: 1.33__qem;
+    -webkit-margin-after: 1.33em;
+  }
+
+  :is(article, aside, nav, section) :is(article, aside, nav, section) :is(article, aside, nav, section) :is(article, aside, nav, section) h1 {
+    font-size: 0.83em;
+    -webkit-margin-before: 1.67__qem;
+    -webkit-margin-after: 1.67em;
+  }
+
+  :is(article, aside, nav, section) :is(article, aside, nav, section) :is(article, aside, nav, section) :is(article, aside, nav, section) :is(article, aside, nav, section) h1 {
+    font-size: 0.67em;
+    -webkit-margin-before: 2.33__qem;
+    -webkit-margin-after: 2.33em;
+  }
+
+  h2 {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83__qem;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+  }
+
+  h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+  }
+
+  h4 {
+    display: block;
+    -webkit-margin-before: 1.33__qem;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+  }
+
+  h5 {
+    display: block;
+    font-size: 0.83em;
+    -webkit-margin-before: 1.67__qem;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+  }
+
+  h6 {
+    display: block;
+    font-size: 0.67em;
+    -webkit-margin-before: 2.33__qem;
+    -webkit-margin-after: 2.33em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+  }
+
+  /* tables */
+
+  table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;
+  }
+
+  thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+
+  tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+
+  tfoot {
+    display: table-footer-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+
+  /* for tables without table section elements (can happen with XHTML or dynamically created tables) */
+  table>tr {
+    vertical-align: middle;
+  }
+
+  col {
+    display: table-column;
+  }
+
+  colgroup {
+    display: table-column-group;
+  }
+
+  tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+  }
+
+  td,
+  th {
+    display: table-cell;
+    vertical-align: inherit;
+  }
+
+  th {
+    font-weight: bold;
+    border: 1px solid grey;
+  }
+
+  caption {
+    display: table-caption;
+    text-align: -webkit-center;
+  }
+
+  /* lists */
+
+  ul,
+  menu,
+  dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 40px;
+  }
+
+  ol {
+    display: block;
+    list-style-type: decimal;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 40px;
+  }
+
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+
+  /* FIXME: this should also match ::before::marker and ::after::marker but we don't support
+ this yet. When we do, we can remove the code specific to ::before and ::after in
+ RenderListItem::computeMarkerStyle(), see bugs.webkit.org/b/218897. */
+  ::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    white-space: pre;
+    text-transform: none;
+  }
+
+  ul ul,
+  ol ul {
+    list-style-type: circle;
+  }
+
+  ol ol ul,
+  ol ul ul,
+  ul ol ul,
+  ul ul ul {
+    list-style-type: square;
+  }
+
+  dd {
+    display: block;
+    -webkit-margin-start: 40px;
+  }
+
+  dl {
+    display: block;
+    -webkit-margin-before: 1__qem;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+  }
+
+  dt {
+    display: block;
+  }
+
+  ol ul,
+  ul ol,
+  ul ul,
+  ol ol {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
+
+  /* form elements */
+
+  form {
+    display: block;
+    margin-top: 0__qem;
+  }
+
+  label {
+    cursor: default;
+  }
+
+  legend {
+    display: block;
+    -webkit-padding-start: 2px;
+    -webkit-padding-end: 2px;
+    border: none;
+  }
+
+  fieldset {
+    display: block;
+    -webkit-margin-start: 2px;
+    -webkit-margin-end: 2px;
+    -webkit-padding-before: 0.35em;
+    -webkit-padding-start: 0.75em;
+    -webkit-padding-end: 0.75em;
+    -webkit-padding-after: 0.625em;
+    border: 2px groove ThreeDFace;
+    min-width: min-content;
+  }
+
+  button {
+    -webkit-appearance: button;
+  }
+
+  /* Form controls don't go vertical. */
+  input,
+  textarea,
+  keygen,
+  select,
+  button,
+  meter,
+  progress {
+    -webkit-writing-mode: horizontal-tb !important;
+  }
+
+  input,
+  textarea,
+  keygen,
+  select,
+  button {
+    margin: 0__qem;
+  }
+
+  input[type="hidden"] {
+    display: none;
+  }
+
+  input::-webkit-textfield-decoration-container {
+    display: flex;
+    align-items: center;
+    content: none !important;
+  }
+
+  input::-webkit-clear-button {
+    -webkit-appearance: searchfield-cancel-button;
+    display: inline-block;
+    flex: none;
+    margin-left: 2px;
+  }
+
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: searchfield-cancel-button;
+    display: block;
+    flex: none;
+    align-self: flex-start;
+    margin: auto 0;
+  }
+
+  input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: searchfield-decoration;
+    display: block;
+    flex: none;
+    align-self: flex-start;
+    margin: auto 0;
+  }
+
+  input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: searchfield-results-decoration;
+    display: block;
+    flex: none;
+    align-self: flex-start;
+    margin: auto 0;
+  }
+
+  ::placeholder {
+    -webkit-text-security: none;
+    color: darkGray;
+    pointer-events: none !important;
+  }
+
+  input::placeholder {
+    white-space: pre;
+    word-wrap: normal;
+    overflow: hidden;
+    line-height: initial;
+  }
+
+  input[type="password"] {
+    -webkit-text-security: disc !important;
+  }
+
+  input:is([type="hidden"], [type="image"], [type="file"]) {
+    -webkit-appearance: initial;
+    padding: initial;
+    background-color: initial;
+    border: initial;
+  }
+
+  input[type="file"] {
+    align-items: baseline;
+    color: inherit;
+    text-align: start !important;
+  }
+
+  input:-webkit-autofill-strong-password {
+    -webkit-user-select: none !important;
+  }
+
+  input:-webkit-autofill-strong-password,
+  input:-webkit-autofill-strong-password-viewable {
+    -webkit-text-security: none !important;
+    cursor: default !important;
+    font-family: monospace;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill-strong-password,
+  input:-webkit-autofill-strong-password-viewable {
+    background-color: #faffbd !important;
+    background-image: none !important;
+    color: #000000 !important;
+  }
+
+  optgroup {
+    font-weight: bolder;
+  }
+
+  option {
+    font-weight: normal;
+  }
+
+  output {
+    display: inline;
+  }
+
+  /* form validation message bubble */
+
+  ::-webkit-validation-bubble {
+    display: inline-block;
+    z-index: 2147483647;
+    position: absolute;
+    opacity: 0.95;
+    line-height: 0;
+    margin: 0;
+    -webkit-text-security: none;
+    transition: opacity 05.5s ease;
+  }
+
+  ::-webkit-validation-bubble-message {
+    display: flex;
+    position: relative;
+    top: -4px;
+    font: message-box;
+    color: black;
+    min-width: 50px;
+    max-width: 200px;
+    border: solid 2px #400;
+    background: -webkit-gradient(linear,
+        left top,
+        left bottom,
+        from(#f8ecec),
+        to(#e8cccc));
+    padding: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 4px 4px 4px rgba(100, 100, 100, 0.6),
+      inset -2px -2px 1px #d0c4c4, inset 2px 2px 1px white;
+    line-height: normal;
+    white-space: normal;
+    z-index: 2147483644;
+  }
+
+  ::-webkit-validation-bubble-text-block {
+    flex: 1;
+  }
+
+  ::-webkit-validation-bubble-heading {
+    font-weight: bold;
+  }
+
+  ::-webkit-validation-bubble-arrow {
+    display: inline-block;
+    position: relative;
+    left: 32px;
+    width: 16px;
+    height: 16px;
+    background-color: #f8ecec;
+    border-width: 2px 0 0 2px;
+    border-style: solid;
+    border-color: #400;
+    box-shadow: inset 2px 2px 1px white;
+    -webkit-transform-origin: 0 0;
+    transform: rotate(45deg);
+    z-index: 2147483645;
+  }
+
+  ::-webkit-validation-bubble-arrow-clipper {
+    display: block;
+    overflow: hidden;
+    height: 16px;
+  }
+
+  /* meter */
+
+  meter {
+    -webkit-appearance: meter;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 1em;
+    width: 5em;
+    vertical-align: -0.2em;
+  }
+
+  /* progress */
+
+  progress {
+    -webkit-appearance: progress-bar;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 1em;
+    width: 10em;
+    vertical-align: -0.2em;
+  }
+
+  progress::-webkit-progress-inner-element {
+    -webkit-appearance: inherit;
+    box-sizing: inherit;
+    height: 100%;
+    width: 100%;
+  }
+
+  progress::-webkit-progress-bar {
+    background-color: gray;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  progress::-webkit-progress-value {
+    background-color: green;
+    height: 100%;
+    width: 50%;
+    /* should be removed later */
+    box-sizing: border-box;
+  }
+
+  /* inline elements */
+
+  u,
+  ins {
+    text-decoration: underline;
+  }
+
+  strong,
+  b {
+    font-weight: bold;
+  }
+
+  i,
+  cite,
+  em,
+  var,
+  address,
+  dfn {
+    font-style: italic;
+  }
+
+  tt,
+  code,
+  kbd,
+  samp {
+    font-family: monospace;
+  }
+
+  pre,
+  xmp,
+  plaintext,
+  listing {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1__qem 0;
+  }
+
+  mark {
+    background-color: yellow;
+    color: black;
+  }
+
+  big {
+    font-size: larger;
+  }
+
+  small {
+    font-size: smaller;
+  }
+
+  s,
+  strike,
+  del {
+    text-decoration: line-through;
+  }
+
+  sub {
+    vertical-align: sub;
+    font-size: smaller;
+  }
+
+  sup {
+    vertical-align: super;
+    font-size: smaller;
+  }
+
+  nobr {
+    white-space: nowrap;
+  }
+
+  /* states */
+
+  input:is([type="button"], [type="checkbox"], [type="file"], [type="hidden"], [type="image"], [type="radio"], [type="reset"], [type="search"], [type="submit"]):focus,
+  input[type="file"]:focus::file-selector-button {
+    outline-offset: 0;
+  }
+
+  a:any-link {
+    color: -webkit-link;
+    text-decoration: underline;
+    cursor: auto;
+  }
+
+  a:any-link:active {
+    color: -webkit-activelink;
+  }
+
+  /* HTML5 ruby elements */
+
+  ruby,
+  rt {
+    text-indent: 0;
+    /* blocks used for ruby rendering should not trigger this */
+  }
+
+  rt {
+    line-height: normal;
+    -webkit-text-emphasis: none;
+  }
+
+  ruby>rt {
+    display: block;
+    font-size: -webkit-ruby-text;
+    text-align: start;
+  }
+
+  ruby>rp {
+    display: none;
+  }
+
+  /* other elements */
+
+  noframes {
+    display: none;
+  }
+
+  frameset,
+  frame {
+    display: block;
+  }
+
+  frameset {
+    border-color: inherit;
+  }
+
+  iframe {
+    border: 2px inset;
+  }
+
+  details {
+    display: block;
+  }
+
+  summary {
+    display: block;
+  }
+
+  summary::-webkit-details-marker {
+    display: inline-block;
+    width: 0.66em;
+    height: 0.66em;
+    margin-right: 0.4em;
+  }
+
+  template {
+    display: none;
+  }
+
+  bdi,
+  output {
+    unicode-bidi: isolate;
+  }
+
+  bdo {
+    unicode-bidi: bidi-override;
+  }
+
+  slot {
+    display: contents;
+  }
+}

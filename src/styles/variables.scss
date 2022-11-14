@@ -1,0 +1,116 @@
+$main-color :#096DD9;
+$font-size-16px: 0.16rem;
+$font-size-14px: 0.14rem;
+$font-size-12px: 0.12rem;
+$font-size-18px: 0.18rem;
+$font-size-13px: 0.13rem;
+
+$padding-sm: 8px;
+$padding-md: 12px;
+$text-color: #333;
+$text-color-gary1: #666;
+$text-color-gary2: #999;
+$text-color-link: #096DD9;
+
+$line-color: #eee;
+
+$border-radius: 8px;
+$border-radius-top: 8px 8px 0 0;
+//顶部距离高度
+$calc-top: 30px;
+
+//背景颜色 上蓝 下白
+$background-blue: linear-gradient($main-color 50%, #fff 50%, #fff);
+
+//修改vant 主题样式
+:root {
+  --van-padding-md: 12px; //中等内边距
+  --van-gray-6: #999;
+  --van-gray-7: #666;
+  --van-gray-8: #333;
+  --van-text-link-color: #096DD9;
+  --van-primary-color: #096DD9;
+  --van-field-word-limit-color: #999;
+  --van-font-size-md: 0.16rem;
+  --van-dialog-confirm-button-text-color: #096DD9
+}
+
+// xs extra Small 超小
+// sm small
+// md medium
+// lg large
+// xl extra Large 超大
+
+// --van-black: #000;
+// --van-white: #fff;
+// --van-gray-1: #f7f8fa;
+// --van-gray-2: #f2f3f5;
+// --van-gray-3: #ebedf0;
+// --van-gray-4: #dcdee0;
+// --van-gray-5: #c8c9cc;
+// --van-gray-6: #969799;
+// --van-gray-7: #646566;
+// --van-gray-8: #323233;
+// --van-red: #ee0a24;
+// --van-blue: #1989fa;
+// --van-orange: #ff976a;
+// --van-orange-dark: #ed6a0c;
+// --van-orange-light: #fffbe8;
+// --van-green: #07c160;
+// --van-gradient-red: linear-gradient(to right, #ff6034, #ee0a24);
+// --van-gradient-orange: linear-gradient(to right, #ffd01e, #ff8917);
+// --van-primary-color: var(--van-blue);
+// --van-success-color: var(--van-green);
+// --van-danger-color: var(--van-red);
+// --van-warning-color: var(--van-orange);
+// --van-text-color: var(--van-gray-8);
+// --van-text-color-2: var(--van-gray-6);
+// --van-text-color-3: var(--van-gray-5);
+// --van-text-link-color: #576b95;
+// --van-active-color: var(--van-gray-2);
+// --van-active-opacity: .6;
+// --van-disabled-opacity: .5;
+// --van-background-color: var(--van-gray-1);
+// --van-background-color-light: var(--van-white);
+// --van-padding-base: 1.06667vw;
+// --van-padding-xs: 2.13333vw;
+// --van-padding-sm: 3.2vw;
+// --van-padding-md: 4.26667vw;
+// --van-padding-lg: 6.4vw;
+// --van-padding-xl: 8.53333vw;
+// --van-font-size-xs: 2.66667vw;
+// --van-font-size-sm: 3.2vw;
+// --van-font-size-md: 3.73333vw;
+// --van-font-size-lg: 4.26667vw;
+// --van-font-weight-bold: 500;
+// --van-line-height-xs: 3.73333vw;
+// --van-line-height-sm: 4.8vw;
+// --van-line-height-md: 5.33333vw;
+// --van-line-height-lg: 5.86667vw;
+// --van-base-font-family: -apple-system,
+// BlinkMacSystemFont,
+// "Helvetica Neue",
+// Helvetica,
+// Segoe UI,
+// Arial,
+// Roboto,
+// "PingFang SC",
+// "miui",
+// "Hiragino Sans GB",
+// "Microsoft Yahei",
+// sans-serif;
+// --van-price-integer-font-family: Avenir-Heavy,
+// PingFang SC,
+// Helvetica Neue,
+// Arial,
+// sans-serif;
+// --van-animation-duration-base: .3s;
+// --van-animation-duration-fast: .2s;
+// --van-animation-timing-function-enter: ease-out;
+// --van-animation-timing-function-leave: ease-in;
+// --van-border-color: var(--van-gray-3);
+// --van-border-width-base: 1px;
+// --van-border-radius-sm: 0.53333vw;
+// --van-border-radius-md: 1.06667vw;
+// --van-border-radius-lg: 2.13333vw;
+// --van-border-radius-max: 266.4vw;
