@@ -4,6 +4,10 @@ import vietEslintPlugin from 'vite-plugin-eslint'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
+import zip from './zip'
+const outputDirName = 'conference-system-pad'
+const outputDir = 'dist/' + outputDirName
+
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
@@ -14,8 +18,18 @@ export default defineConfig({
       cache: false
     }),
     VueSetupExtend(), // setup 支持name属性
-    vueJsx({}) // jsx、tsx支持
+    vueJsx({}), // jsx、tsx支持
+    zip(outputDirName, outputDir)
   ],
+  build: {
+    outDir: outputDir,
+    terserOptions: {
+      // compress: {
+      //   drop_console: true,
+      //   drop_debugger: true
+      // }
+    }
+  },
   resolve: {
     // 配置别名
     alias: [{ find: '@', replacement: resolve(__dirname, 'src') }]

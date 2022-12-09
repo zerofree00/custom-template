@@ -49,7 +49,7 @@ experienceDetail(id).then(res => {
 </script>
 
 <style lang="scss" scoped>
-::v-deep .ck-content table{
+:deep .ck-content table{
   width:100%!important;
 }
 .detail-box{

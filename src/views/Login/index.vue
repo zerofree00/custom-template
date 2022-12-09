@@ -138,7 +138,7 @@ const closeLogin = function () {
   color:#BFBFBF;
   font-size: $font-size-12px;
 }
-::v-deep .van-field__control{
+:deep .van-field__control{
   font-size: $font-size-16px;
 
 }
