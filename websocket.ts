@@ -1,3 +1,9 @@
+/**
+ * @description 简易版 websoket连接
+ * @example
+ * createSocket2() 创建
+ * closeSocket() 清楚连接
+ */
 import { getCurrentMeetingApi } from '@/api/metting'
 import { Dialog } from 'vant'
 import router from '@/router/index'

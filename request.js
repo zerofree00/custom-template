@@ -1,9 +1,4 @@
-/*
- * Created Date: Monday June 3rd 2019
- * Author: lugusliu
- * Copyright (c) 2019 doBell
- * HISTORY:
- */
+
 import axios from 'axios';
 import store from '@/store';
 import { refreshToken } from '@/utils/api';
