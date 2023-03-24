@@ -2,7 +2,7 @@
  *  ===   文件打包生成zip文件 配置
  *   需要安装 2.0.5 版本  "filemanager-webpack-plugin": "^2.0.5",
  *   使用方式
- const zipPlugin = require('./vue2.x-zip')
+ const zipPlugin = require('vue2.x-zip-plugin')
  zipPlugin().outputDir 生成包名
  zipPlugin().plugin() 执行方法
 
@@ -17,7 +17,7 @@ const pluginInit = function (name) {
     return new Date(d).toISOString().split(/[^0-9]/).slice(0, -1);
   }
 
-  let outputDirName = name || `${ packageData.name }-v${ packageData.version }`
+  let outputDirName = name || `dist/${ packageData.name }-v${ packageData.version }`
   const time = `${ extract(new Date()).slice(0, 4).join('.') }`
 
   return {
