@@ -7,6 +7,9 @@
  * @FilePath: \mytemplate\README.md
 -->
 
+## 开发用到的工具类
+
+### 目录介绍
 ```
 |-- adaptation.less
     |-- adaptation.less ------------ // less 的基础配置/使用方法
@@ -20,8 +23,6 @@
     |-- vue2.x-zip-plugin.js ------------ // vue2.x 脚手架 文件打包生成zip文件 配置
 ```
 
-
-## 开发用到的工具类
 
 ## 在线文档
 
