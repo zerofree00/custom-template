@@ -5,7 +5,6 @@
  const zipPlugin = require('vue2.x-zip-plugin')
  zipPlugin().outputDir 生成包名
  zipPlugin().plugin() 执行方法
-
  */
 const FileManagerPlugin = require('filemanager-webpack-plugin')
 const packageData = require('./package.json')
