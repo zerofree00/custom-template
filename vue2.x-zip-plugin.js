@@ -23,8 +23,7 @@ const pluginInit = function (name) {
     plugin () {
       return new FileManagerPlugin({
         onEnd: {
-          delete: ['./*.zip'],
-          // delete: ['./*.zip', './dist/*.zip'],
+          delete: ['./*.zip', './dist/*.zip'],
           archive: [
             {
               source: `./${ outputDirName }`,
