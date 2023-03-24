@@ -1,5 +1,5 @@
 /**
- *  ===   文件打包生成zip文件 配置
+ *  === vue2.x 脚手架 文件打包生成zip文件 配置
  *   需要安装 2.0.5 版本  "filemanager-webpack-plugin": "^2.0.5",
  *   使用方式
  const zipPlugin = require('vue2.x-zip-plugin')
