@@ -3,8 +3,8 @@
  *   需要安装 2.0.5 版本  "filemanager-webpack-plugin": "^2.0.5",
  *   使用方式
  const zipPlugin = require('./vue2.x-zip')
- zipPlugin().outputDir
- zipPlugin().plugin()
+ zipPlugin().outputDir 生成包名
+ zipPlugin().plugin() 执行方法
 
  */
 const FileManagerPlugin = require('filemanager-webpack-plugin')
