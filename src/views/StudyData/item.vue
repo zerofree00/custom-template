@@ -1,17 +1,17 @@
 <template>
   <div
     class="experience-item van-hairline--bottom"
-    @click="goDetail"
+    @click="goDetail(item.id)"
   >
     <div class="img">
-      <Cover :url="item.cover" />
+      <Cover :url="item.photo" />
     </div>
     <div class="info">
       <p class="">
         {{ item.title }}
       </p>
       <p>
-        作者：{{ item.dd || '-' }}
+        作者：{{ item.content || '-' }}
       </p>
       <p>
         {{ item.content }}
@@ -23,11 +23,28 @@
 import { useRouter } from 'vue-router'
 
 interface Props {
-  item?: { }
+  item?: {
+    id:string,
+    title:string,
+    content:string,
+    name:string,
+    time:string,
+    photo:string,
+  }
 }
 withDefaults(defineProps<Props>(), {
-  item: () => { return {} }
+  item: () => {
+    return {
+      id: '',
+      title: '',
+      content: '',
+      name: '',
+      photo: '',
+      time: ''
+    }
+  }
 })
+
 const router = useRouter()
 const goDetail = function (id: string) {
   router.push('/group/detail/' + id)

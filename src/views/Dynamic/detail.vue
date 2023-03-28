@@ -15,11 +15,6 @@
         class="detail ck-content"
         v-html="data.content"
       />
-      <FileList
-        style="margin-top:20px"
-        :id="id"
-        v-if="id"
-      />
     </div>
   </Layout>
 </template>
@@ -27,7 +22,6 @@
 import { reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import { dynamicDetail } from '@/api/experience'
-import FileList from '@/components/FileList/index.vue'
 // 获取详情
 const route = useRoute()
 const data = reactive({

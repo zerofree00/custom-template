@@ -117,6 +117,7 @@ const notifyList = ref<Array<any>>([
 const readShareItem = reactive({
   title: '锦州市政协王鹤松《粮食安全干部读本》读书体会',
   name: '昂委员',
+  id: '昂委员',
   time: '2022-08-05',
   photo: 'https://img01.yzcdn.cn/vant/cat.jpeg',
   content: '读写讯息的信贷分享读写讯息的信贷分享读写讯息的信贷分享读写讯息的信贷分享读写讯息的信贷分享读写讯息的信贷分享读写讯息的信贷分享读写讯息的信贷分享读写讯息的信贷分享读写讯息的信贷分享读写讯息的信贷分享'

@@ -29,10 +29,26 @@
 import { useRouter } from 'vue-router'
 
 interface Props {
-  item?: {}
+  item?: {
+    id:string,
+    title:string,
+    content:string,
+    name:string,
+    time:string,
+    photo:string,
+  }
 }
 withDefaults(defineProps<Props>(), {
-  item: () => { return {} }
+  item: () => {
+    return {
+      id: '',
+      title: '',
+      content: '',
+      name: '',
+      photo: '',
+      time: ''
+    }
+  }
 })
 
 const router = useRouter()
