@@ -20,6 +20,7 @@
     |-- validate.js ------------ // 一些表单验证集合
     |-- websocket.ts ------------ // 简易版 websoket连接
     |-- wxMtils.js ------------ // 微信小程序的一些，工具类集合
+    |-- vue2.x-dist-zip.js ------------ // vue2.x脚手架，打包dist包，生成zip压缩包
     |-- vue2.x-zip-plugin.js ------------ // vue2.x 脚手架 文件打包生成zip文件 配置
 ```
 
