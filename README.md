@@ -18,5 +18,5 @@ devtool,
 plugins: process.env.NODE_ENV === 'production' ? [zipPlugin('cppcc-data-exchange-shanxi')] : []
 }
 `
-![img.png](vue2-dist-zip.png)
+![img.png](img.png)
 
