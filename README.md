@@ -11,8 +11,8 @@
 
 https://www.npmjs.com/package/vue2-dist-zip
 在vue.config.js中
+> const zipPlugin = require('vue2-dist-zip')
 `
-const zipPlugin = require('vue2-dist-zip')
 configureWebpack: {
 devtool,
 plugins: process.env.NODE_ENV === 'production' ? [zipPlugin('cppcc-data-exchange-shanxi')] : []
