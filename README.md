@@ -4,13 +4,12 @@
 # 分支 utils
 保存一些前端工具类
 
-
 # npm 库
 
-### vue2.x项目打包的时候，直接压缩dist生成zip
+### 使用filemanager-webpack-plugin2.0.5版本vue2打包dist包之后生成zip压缩包
 - https://www.npmjs.com/package/vue2-dist-zip
 下载
-> npm install vue2-dist-zip filemanager-webpack-plugin@2.0.5 -D 
+> npm install filemanager-vue2-dist-zip -D 
 > 
 > 在vue.config.js中
 
